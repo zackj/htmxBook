@@ -1,0 +1,34 @@
+[
+  {
+    "id": 0,
+    "first": "Carson",
+    "last": "Gross",
+    "phone": "456-789-0123",
+    "email": "carson@example.comz",
+    "errors": {}
+  },
+  {
+    "id": 2,
+    "first": "Zack",
+    "last": "Jarrett",
+    "phone": "789-012-3456",
+    "email": "zack@example.com",
+    "errors": {}
+  },
+  {
+    "id": 3,
+    "first": "Harry",
+    "last": "Potter",
+    "phone": "123-123-4444",
+    "email": "harry@hogwarts.com",
+    "errors": {}
+  },
+  {
+    "id": 4,
+    "first": "Hermione",
+    "last": "Granger",
+    "phone": "904-111-2222",
+    "email": "hermione@granger.com",
+    "errors": {}
+  }
+]
