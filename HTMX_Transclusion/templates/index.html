@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<p>Explore <a href="https://en.wikipedia.org/wiki/Transclusion">Transclusion</a></p>
+<p>When you click the below buttons, they'll perform a GET to /contacts. That get will return an unordered list (ul) of the contact emails as HTML. The HTMX hx-swap attribute controls where that returned HTML gets swapped in.</p>
+
+<hr />
+
+<p>This button will be replaced with the list of contacts but the div wrapping it will remain.</p>
+<div id="a">
+    <button hx-get="/contacts" hx-target="#a" hx-swap="innerHTML">
+        Get Contacts and swap innerHTML
+    </button>
+</div>
+
+<hr />
+
+<p>This button and the div wrapping it will be replaced with the list of contacts</p>
+<div id="b">
+    <button hx-get="/contacts" hx-target="#b" hx-swap="outerHTML">
+        Get Contacts and swap outerHTML
+    </button>
+</div>
+
+<hr />
+
+<p>This button will transclude the result of get /contacts before the button.</p>
+<div id="c">
+    <button hx-get="/contacts" hx-target="#c" hx-swap="beforebegin">
+        Get Contacts and swap beforebegin
+    </button>
+</div>
+
+<hr />
+
+<p>This button will transclude the result of get /contacts before the first child of the target element.</p>
+<div id="d">
+    <p>First child of div d</p>
+    <button hx-get="/contacts" hx-target="#d" hx-swap="afterbegin">
+        Get Contacts and swap afterbegin
+    </button>
+    <p>Last child of div d</p>
+</div>
+
+<hr />
+
+<p>This button will transclude the result of get /contacts after the last child of the target element.</p>
+<div id="e">
+    <p>First child of div e</p>
+    <button hx-get="/contacts" hx-target="#e" hx-swap="beforeend">
+        Get Contacts and swap beforeend
+    </button>
+    <p>Last child of div e</p>
+</div>
+
+<hr />
+
+<p>This button will transclude the result of get /contacts after the button.</p>
+<div id="f">
+    <button hx-get="/contacts" hx-target="#f" hx-swap="afterend">
+        Get Contacts and swap afterend
+    </button>
+</div>
+
+<hr />
+
+<p>This button will delete the target element, regardless of the response.</p>
+<div id="g">
+    <button hx-get="/contacts" hx-target="#g" hx-swap="delete">
+        Get Contacts and delete
+    </button>
+</div>
+
+<p></p>
+{% endblock %}

@@ -1,6 +1,14 @@
 Hypermedia Model of the Web:
 1. TODO: Define this.
 
+HTXM Core: 
+1. Allow any element in a web page to issue HTTP requests.
+2. Expect the response to that request to be HTML (possibly partial bits of HTML)
+
+3. Uses "transclusion" to replace parts of the DOM.
+
+
+AJAX: Asynchronous Javascript + XML
 
 HTMX Opportunities:
 
@@ -28,3 +36,12 @@ These operations make up CRUD.
 Anchors cause a "flash" of un-styled content and it redraws the whole screen.
 
 HTMX allows the application to function more like a Single Page Application by only updated part of the DOM at a time.
+
+
+TidBits:
+1. No JS required besides the HTMX library. You just use HTMX attributes on elements in your HTML.
+
+Notes:
+1. When you load from unpkg you should get an integrity hash from https://srihash.org.
+
+2. 
