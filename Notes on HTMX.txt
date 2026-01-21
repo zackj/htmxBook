@@ -1,0 +1,30 @@
+Hypermedia Model of the Web:
+1. TODO: Define this.
+
+
+HTMX Opportunities:
+
+1. Hypermedia Control
+Allow any element to be a hypermedia control, not just <a href> and buttons inside forms. 
+
+Any element can issue HTTP requests to the server.
+
+2. HTML could be extended to allow ANY event, not just a click, to trigger HTTP requests.
+
+3. HTML could be extended to allow access to the three missing HTTP methods: PUT, DELETE, PATCH.
+
+Currently HTML only supports GET and POST.
+
+GET: Read only. Get a resource.
+POST: Submit data. Creating or mutating resources.
+PUT: Submits an entity for update or replacement.
+PATCH: Like PUT, but implies partial update rather than complete replacement.
+DELETE: Deletes a resource
+
+These operations make up CRUD.
+
+4. HTML could be extended to allow responses to requests to replace elements within the current document, instead of replacing the entire document.
+
+Anchors cause a "flash" of un-styled content and it redraws the whole screen.
+
+HTMX allows the application to function more like a Single Page Application by only updated part of the DOM at a time.
